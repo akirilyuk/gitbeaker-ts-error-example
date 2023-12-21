@@ -1,0 +1,1 @@
+# gitbeaker-ts-error-example
