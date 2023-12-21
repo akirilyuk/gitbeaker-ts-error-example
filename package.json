@@ -1,0 +1,39 @@
+{
+  "name": "gitbeaker-ts-error-example",
+  "version": "1.0.0",
+  "description": "gitbeaker error example",
+  "main": "index.ts",
+  "repository": "git@https://github.com/akirilyuk/gitbeaker-ts-error-example.git",
+  "author": "akirilyuk <a.kirilyuk@cognigy.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "tsc-watch -p tsconfig.json --onSuccess \"node dist/index.js\"",
+    "build": "tsc --project tsconfig.json",
+    "deploy:commands": "yarn build && node dist/deploy-commands.js",
+    "format": "prettier --write \"**/*.ts\"",
+    "lint": "eslint --ext=.ts ./src ./test",
+    "lint:fix": "eslint --ext=.ts ./src ./test --fix",
+    "start": "node dist/index.js",
+    "debug": "node --inspect=0.0.0.0 dist/index.js"
+  },
+  "dependencies": {
+    "@gitbeaker/rest": "39.26.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.10.5",
+    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "@typescript-eslint/parser": "6.2.0",
+    "eslint": "8.45.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-prettier": "5.0.0",
+    "prettier": "3.0.0",
+    "ts-node": "10.9.1",
+    "tsc-watch": "6.0.4",
+    "typescript": "5.1.6"
+  },
+  "engines": {
+    "node": "=18.17.0"
+  }
+}
